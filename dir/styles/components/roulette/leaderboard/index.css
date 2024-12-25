@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Theming variables for the leaderboard */
+  :root {
+    --leaderboard-win-gradient-1: #fc0430;
+    --leaderboard-win-gradient-2: #aa0019;
+    --leaderboard-win-14x-gradient-1: #1abe8f;
+    --leaderboard-win-14x-gradient-2: #52e27a;
+    --leaderboard-win-gradient-3: #414747;
+    --leaderboard-win-gradient-4: #2e393b;
+    --leaderboard-border-color: #7b7d81;
+    --leaderboard-bg-color: #1a1d26;
+    --leaderboard-text-color: #ffffff;
+    --leaderboard-text-secondary: rgba(255, 255, 255, 0.75);
+  }
+
+  /* Layout container */
+  .leaderboard-container {
+    background-color: var(--leaderboard-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+  }
+
+  /* Individual leaderboard item */
+  .leaderboard-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+  }
+
+  /* Win 2X or Win 14X gradient background */
+  .leaderboard-win-2x {
+    background: linear-gradient(to top right, var(--leaderboard-win-gradient-1), var(--leaderboard-win-gradient-2));
+    border-radius: 0.75rem;
+  }
+
+  .leaderboard-win-14x {
+    background: linear-gradient(to top right, var(--leaderboard-win-14x-gradient-1), var(--leaderboard-win-14x-gradient-2));
+    border-radius: 0.75rem;
+  }
+
+  /* Player information container */
+  .leaderboard-player-container {
+    border-bottom: 1px solid var(--leaderboard-border-color);
+  }
+
+  /* Player text style */
+  .leaderboard-title {
+    color: var(--leaderboard-text-color);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .leaderboard-player {
+    color: var(--leaderboard-text-secondary);
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+}

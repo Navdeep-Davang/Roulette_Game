@@ -4,7 +4,7 @@ import React from "react";
 
 const NavBar = () => {
   return (
-    <div className="px-4 py-4 navbar-bg justify-between items-center inline-flex">
+    <div className="w-full px-4 py-4 navbar-bg justify-between items-center inline-flex">
       {/* Logo Section */}
       <div className="justify-start items-center flex">
         <Image

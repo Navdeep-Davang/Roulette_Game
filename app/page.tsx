@@ -1,7 +1,8 @@
+import Roulette from "@/dir/components/roulette";
 
 
 export default function Home() {
-  return (
-   <div> Home </div>
+  return (    
+   <Roulette/>
   );
 }

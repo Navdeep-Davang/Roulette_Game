@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="p-4 footer-bg justify-between items-center inline-flex">
+    <div className="w-full p-4 footer-bg justify-between items-center inline-flex">
       {/* Logo Section */}
       <div className="justify-start items-center flex">
         <Image
