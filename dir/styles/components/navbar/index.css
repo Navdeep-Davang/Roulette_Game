@@ -5,16 +5,21 @@
 @layer base {
   /* Theming variables */
   :root {
+    --navbar-bg-color: #191D25;
     --custom-orange: #ffa31a; /* Define the custom color */
     --custom-orange-hover: #ff8c00; /* Hover effect color */
   }
 
   /* Utility classes for custom effects */
+  .navbar-bg {
+    background-color: var(--navbar-bg-color);
+  }
+
   .bg-custom-orange {
     background-color: var(--custom-orange);
   }
 
-  .hover\:bg-custom-orange:hover {
+  .bg-custom-orange:hover {
     background-color: var(--custom-orange-hover);
   }
 
@@ -22,7 +27,7 @@
     color: var(--custom-orange);
   }
 
-  .hover\:text-custom-orange:hover {
+  .text-custom-orange:hover {
     color: var(--custom-orange-hover);
   }
 

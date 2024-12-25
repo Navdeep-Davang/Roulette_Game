@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Footer theme variables */
+  :root {
+    --footer-bg-color: #202442;
+    --footer-border-color: white;
+    --footer-text-color: white;
+  }
+
+  /* Utility classes for footer */
+  .footer-bg {
+    background-color: var(--footer-bg-color);
+  }
+
+  .footer-border {
+    border-color: var(--footer-border-color);
+  }
+
+  .footer-text {
+    color: var(--footer-text-color);
+    border-bottom: 1px solid transparent; 
+    transition: border-color 0.3s ease;
+  }
+
+  .footer-text:hover {
+    border-bottom: 1px solid var(--footer-text-color); 
+    cursor: pointer;
+  }
+
+
+  .footer-link {
+    transition: color 0.2s ease;
+  }
+
+  .footer-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
