@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Theming variables for the chat panel */
+  :root {
+    --chatbox-bg: #3a3a3a;
+    --chatbox-title-bg: #21222b;
+    --chatbox-component-bg: #ffa31a;
+    --chatbox-component-bg-hover: #ff8c00;  
+    --status-online: #2cb92b;
+    --status-text: #ffffff;
+    --status-text-secondary: #6c757d;
+    --status-info-bg: #191d25;
+    --status-info-text: #6c757d;
+    --chatbox-bg-hover: #2a2a2a; /* Hover effect color for the chatbox */
+  }
+
+  /* Layout-related styles for the chat panel */
+  .chatbox-panal {
+    background-color: var(--chatbox-bg);    
+  }
+
+  .chatbox-title {
+    background-color: var(--chatbox-title-bg);
+    color: var(--chatbox-component-bg);
+  }
+
+  .chatbox-title-text {
+    color: var(--chatbox-component-bg);
+  }
+
+  .status-indicator {
+    background-color: var(--status-online);
+  }
+
+  .status-text {
+    color: var(--status-text);
+  }
+
+  .chatbox-footer {
+    background-color: var(--status-info-bg);
+  }
+
+  .status-info-text {
+    color: var(--status-info-text);
+  }
+  
+  .send-bg {
+    background-color: var(--chatbox-component-bg);
+  }
+
+  .send-bg:hover {
+    background-color: var(--chatbox-component-bg-hover);
+  }
+
+}

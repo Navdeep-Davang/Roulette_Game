@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "@/dir/styles/globals.css" ;
 import Footer from "@/dir/components/footer";
 import NavBar from "@/dir/components/navbar";
+import { Sidebar, SidebarContent, SidebarMenu, SidebarMenuButton, SidebarProvider, SidebarSeparator } from "@/components/ui/sidebar";
+import ChatPanel from "@/dir/components/chatPanel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,9 +33,22 @@ export default function RootLayout({
       >
         <div className="relative min-h-screen flex flex-col">
           <NavBar /> {/* Sticky Navbar */}
-          <main className="flex-1">{children}</main> {/* Main Content */}
+          <main className="flex-1 flex"> {/* Main Content Area with flex for left and right sections */}
+            {/* Left section for the main content */}
+            <div className="w-full">{children}</div> {/* Main Content */}
+            
+            {/* Right section for Sidebar (Chat Panel) */}
+            <div className="w-96">
+             <ChatPanel/>
+            </div>
+          </main>
+
           <Footer /> {/* Sticky Footer */}
         </div>
+
+
+      
+
       </body>
     </html>
   );
