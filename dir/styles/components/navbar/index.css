@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Theming variables */
+  :root {
+    --custom-orange: #ffa31a; /* Define the custom color */
+    --custom-orange-hover: #ff8c00; /* Hover effect color */
+  }
+
+  /* Utility classes for custom effects */
+  .bg-custom-orange {
+    background-color: var(--custom-orange);
+  }
+
+  .hover\:bg-custom-orange:hover {
+    background-color: var(--custom-orange-hover);
+  }
+
+  .text-custom-orange {
+    color: var(--custom-orange);
+  }
+
+  .hover\:text-custom-orange:hover {
+    color: var(--custom-orange-hover);
+  }
+
+  /* Transition for smooth effects */
+  .transition-color {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
