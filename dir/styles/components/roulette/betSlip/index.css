@@ -5,6 +5,7 @@
 @layer base {
   /* Theming variables for the leaderboard */
   :root {
+    --bet-slip-bg: #13161d;
     --bet-input-bg: #191d25;
     --bet-input-border: rgba(255, 164, 26, 0.2);
     --bet-button-bg: #191d25;
@@ -17,8 +18,12 @@
   }
 
 
-  /* Layout container */
-  .bet-input {
+    /* Layout container */
+    .bet-slip {
+    background-color: var(--bet-slip-bg);    
+    }
+
+    .bet-input {
     background-color: var(--bet-input-bg);
     border: 1px solid var(--bet-input-border);
     border-radius: 0.5rem;
