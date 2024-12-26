@@ -1,5 +1,4 @@
 import React from "react";
-import "./wheel.css";
 import Image from "next/image";
 
 const Wheel = () => {
@@ -17,10 +16,10 @@ const Wheel = () => {
       value: (
         <Image
           className="wheel-icon"
-          src="https://via.placeholder.com/35x45"
+          src="/roulette/Sign.png"
           alt="Special Icon"
-          width={40}
-          height={40}
+          width={70}
+          height={70}
         />
       ),
       colorClass: "gradient-green",
@@ -34,18 +33,14 @@ const Wheel = () => {
 
   return (
     <div
-      className="wheel-container w-96 h-20 justify-start items-center gap-2.5 inline-flex"
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-      }}
+      className="wheel-container overflow-clip w-full flex h-20 justify-center items-center gap-2.5"
     >
       {wheelData.map((item, index) => (
         <div
           key={index}
-          className={`wheel-item w-20 h-20 px-8 pt-7 pb-6 rounded-lg flex-col justify-start items-center inline-flex ${item.colorClass}`}
+          className={`wheel-item min-w-[85px] h-20 pt-7 pb-6 rounded-lg flex-col justify-center items-center inline-flex ${item.colorClass}`}
         >
-          <div className="wheel-text text-center text-xl font-normal">{item.value}</div>
+          <div className="wheel-text min-w-8 text-center text-xl font-normal">{item.value}</div>
         </div>
       ))}
     </div>

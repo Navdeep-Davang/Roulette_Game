@@ -1,5 +1,4 @@
 @import "./navbar/index.css";
 @import "./footer/index.css";
 @import "./chatPanel/index.css";
-@import "./roulette/leaderboard/index.css";
-@import "./roulette/betSlip/index.css";
+@import "./roulette/index.css";

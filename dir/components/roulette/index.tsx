@@ -2,13 +2,17 @@
 import React from 'react';
 import LeaderBoard from './LeaderBoard';
 import BetSlip from './BetSlip';
+import { Game } from './Game';
 
 const Roulette = () => {
   return (
-    <div>
-      <h2>Roulette Game Results</h2>
+    <div className='flex flex-col gap-5'>
+      <div className="h-1 bg-[var(--custom-orange)]" />
+      
+      <Game/>
       <BetSlip/>
       <LeaderBoard/>
+      
     </div>
   );
 };

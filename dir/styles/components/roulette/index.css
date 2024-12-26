@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./leaderboard/index.css";
+@import "./betSlip/index.css";
+@import "./game/wheel/index.css";
+
+@layer base {
+.overlay {
+    background: linear-gradient(to right, 
+        black 0%, 
+        transparent 15%, 
+        transparent 85%, 
+        black 100%);
+    }
+}
