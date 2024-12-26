@@ -40,7 +40,7 @@ export default function RootLayout({
               </div>
               
               {/* Right section for Sidebar (Chat Panel) */}
-              <div className="w-80 flex-grow overflow-auto">
+              <div className="max-w-[300px] flex-grow overflow-auto">
                 <ChatPanel/>
               </div>              
           </main>

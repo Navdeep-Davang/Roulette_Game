@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Theming variables for the leaderboard */
+  :root {
+    --bet-input-bg: #191d25;
+    --bet-input-border: rgba(255, 164, 26, 0.2);
+    --bet-button-bg: #191d25;
+    --bet-button-border: rgba(255, 164, 26, 0.2);
+    --bet-max-button-text: #ffa31a;
+    --bet-clear-bg: #ff0000;
+    --bet-clear-shadow: inset 0px 0px 7px 4px rgba(180, 21, 21, 1.0);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.5);
+  }
+
+
+  /* Layout container */
+  .bet-input {
+    background-color: var(--bet-input-bg);
+    border: 1px solid var(--bet-input-border);
+    border-radius: 0.5rem;
+    }
+
+    /* Text inside the input */
+    .text-input {
+    color: var(--text-secondary);
+    font-size: 0.875rem; /* text-sm */
+    font-family: 'Poppins', sans-serif;
+    }
+
+    /* Generic bet button */
+    .bet-button {
+    background-color: var(--bet-button-bg);
+    border: 1px solid var(--bet-button-border);
+    border-radius: 0.5rem;
+    }
+
+    .bet-max-button {
+    background-color: var(--bet-button-bg);
+    border: 1px solid var(--bet-button-border);
+    border-radius: 0.5rem;
+    color: var(--bet-max-button-text);
+    font-weight: 600; /* font-semibold */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    }
+
+    /* Clear button */
+    .bet-clear-button {
+    background-color: var(--bet-clear-bg);
+    box-shadow: var(--bet-clear-shadow);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+    font-weight: 700; /* font-bold */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    }
+}
