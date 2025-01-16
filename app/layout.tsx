@@ -35,12 +35,18 @@ export default function RootLayout({
           <NavBar /> {/* Sticky Navbar */}
           <main className="flex flex-row flex-grow overflow-hidden"> {/* Main Content Area with flex for left and right sections */}
               {/* Left section for the main content */}           
-              <div className="flex-grow overflow-auto">
+              <div className="flex-grow overflow-auto"
+                style={{
+                  backgroundImage: "url('/roulette/Grad_Bg.PNG')",
+                  backgroundSize: "cover", 
+                  backgroundPosition: "center", 
+                  backgroundRepeat: "no-repeat", 
+              }}>
                 {children} 
               </div>
               
               {/* Right section for Sidebar (Chat Panel) */}
-              <div className="max-w-[300px] flex-grow overflow-auto">
+              <div className="min-w-[280px] flex-grow overflow-auto hidden lg:block">
                 <ChatPanel/>
               </div>              
           </main>

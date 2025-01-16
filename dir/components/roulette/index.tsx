@@ -6,7 +6,7 @@ import { Game } from './Game';
 
 const Roulette = () => {
   return (
-    <div className='flex flex-col gap-5'>
+    <div className='flex flex-col p-4 gap-5'>
       <div className="h-1 bg-[var(--custom-orange)]" />
       
       <Game/>
