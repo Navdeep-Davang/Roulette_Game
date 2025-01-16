@@ -5,6 +5,8 @@ import Footer from "@/dir/components/footer";
 import NavBar from "@/dir/components/navbar";
 //import { Sidebar, SidebarContent, SidebarMenu, SidebarMenuButton, SidebarProvider, SidebarSeparator } from "@/components/ui/sidebar";
 import ChatPanel from "@/dir/components/chatPanel";
+import SubHeader from "@/dir/components/navbar/SubHeader";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +35,10 @@ export default function RootLayout({
       >
         <div className="relative min-h-screen flex flex-col">
           <NavBar /> {/* Sticky Navbar */}
-          <main className="flex flex-row flex-grow overflow-hidden"> {/* Main Content Area with flex for left and right sections */}
+          
+          <main className="relative flex flex-row flex-grow overflow-hidden"> {/* Main Content Area with flex for left and right sections */}
+              <SubHeader />
+
               {/* Left section for the main content */}           
               <div className="flex-grow overflow-auto"
                 style={{
@@ -42,7 +47,9 @@ export default function RootLayout({
                   backgroundPosition: "center", 
                   backgroundRepeat: "no-repeat", 
               }}>
+                
                 {children} 
+                
               </div>
               
               {/* Right section for Sidebar (Chat Panel) */}
