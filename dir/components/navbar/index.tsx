@@ -5,9 +5,11 @@ import Image from "next/image";
 import React from "react";
 // import SubHeader from "./SubHeader"; // Import SubHeader component
 import useSubHeaderStore from "@/dir/states/SubHeader";
+import { useSheetStore } from "@/dir/states/ChatSheet";
 
 const NavBar = () => {
   const { isSubHeaderVisible, toggleSubHeader } = useSubHeaderStore();
+  const openSheet = useSheetStore((state) => state.openSheet);
 
   return (
     <div>
@@ -37,7 +39,10 @@ const NavBar = () => {
           </button>
 
           {/* On smaller Device */}
-          <div className="p-1 cursor-pointer icon-custom-orange ">
+          <div 
+            className="p-1 cursor-pointer icon-custom-orange "
+            onClick={openSheet}
+          >
             <MessageCircleIcon className="w-8 h-8  lg:hidden" />
           </div>
           

@@ -1,11 +1,12 @@
-import { useSheetStore } from "@/stores/sheetStore";
+'use client'
+
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import { useSheetStore } from "@/dir/states/ChatSheet";
 
 const ChatSheet = () => {
-  const { isOpen, closeSheet } = useSheetStore((state) => ({
-    isOpen: state.isOpen,
-    closeSheet: state.closeSheet,
-  }));
+    const isOpen = useSheetStore((state) => state.isOpen);
+    const closeSheet = useSheetStore((state) => state.closeSheet);
+  
 
   return (
     <Sheet open={isOpen} onOpenChange={(open) => (open ? null : closeSheet())}>

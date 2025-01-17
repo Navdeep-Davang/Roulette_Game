@@ -6,6 +6,7 @@ import NavBar from "@/dir/components/navbar";
 //import { Sidebar, SidebarContent, SidebarMenu, SidebarMenuButton, SidebarProvider, SidebarSeparator } from "@/components/ui/sidebar";
 import ChatPanel from "@/dir/components/chatPanel";
 import SubHeader from "@/dir/components/navbar/SubHeader";
+import ChatSheet from "@/dir/components/chatPanel/ChatSheet";
 
 
 const geistSans = Geist({
@@ -38,6 +39,7 @@ export default function RootLayout({
           
           <main className="relative flex flex-row flex-grow overflow-hidden"> {/* Main Content Area with flex for left and right sections */}
               <SubHeader />
+              <ChatSheet/>
 
               {/* Left section for the main content */}           
               <div className="flex-grow overflow-auto"
