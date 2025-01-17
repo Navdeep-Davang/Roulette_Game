@@ -4,7 +4,7 @@ import { MenuIcon, MessageCircleIcon, Volume2 } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 // import SubHeader from "./SubHeader"; // Import SubHeader component
-import useSubHeaderStore from "@/dir/states/SubHeader/store";
+import useSubHeaderStore from "@/dir/states/SubHeader";
 
 const NavBar = () => {
   const { isSubHeaderVisible, toggleSubHeader } = useSubHeaderStore();
@@ -37,8 +37,10 @@ const NavBar = () => {
           </button>
 
           {/* On smaller Device */}
-          <MessageCircleIcon className="w-8 h-8 icon-custom-orange cursor-pointer lg:hidden" />
-
+          <div className="p-1 cursor-pointer icon-custom-orange ">
+            <MessageCircleIcon className="w-8 h-8  lg:hidden" />
+          </div>
+          
           <div 
             className={`p-1 border icon-custom-orange rounded-md ${isSubHeaderVisible ? 'burger-menu active' : ''}`}
             onClick={toggleSubHeader} 
