@@ -7,9 +7,13 @@ import React from "react";
 import useSubHeaderStore from "@/dir/states/SubHeader";
 import { useSheetStore } from "@/dir/states/ChatSheet";
 
+const btnclick = () => {
+  console.log("clicked me")
+}
+
 const NavBar = () => {
   const { isSubHeaderVisible, toggleSubHeader } = useSubHeaderStore();
-  const openSheet = useSheetStore((state) => state.openSheet);
+  const { isOpen, openSheet, closeSheet } = useSheetStore();
 
   return (
     <div>
@@ -39,11 +43,18 @@ const NavBar = () => {
           </button>
 
           {/* On smaller Device */}
+           <button 
+            className="lg:hidden bg-white"
+            onClick={() => btnclick()}
+            >
+            
+              Click me
+           </button>
           <div 
-            className="p-1 cursor-pointer icon-custom-orange "
-            onClick={openSheet}
+            className={`p-1 lg:hidden cursor-pointer icon-custom-orange ${isOpen ? 'active' : ''}`}
+            onClick={() => isOpen ? closeSheet() : openSheet()}
           >
-            <MessageCircleIcon className="w-8 h-8  lg:hidden" />
+            <MessageCircleIcon className="w-8 h-8 " />
           </div>
           
           <div 

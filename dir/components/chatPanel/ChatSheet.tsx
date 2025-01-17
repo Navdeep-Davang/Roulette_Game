@@ -4,12 +4,10 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { useSheetStore } from "@/dir/states/ChatSheet";
 
 const ChatSheet = () => {
-    const isOpen = useSheetStore((state) => state.isOpen);
-    const closeSheet = useSheetStore((state) => state.closeSheet);
-  
+    const isOpen = useSheetStore((state) => state.isOpen);  
 
   return (
-    <Sheet open={isOpen} onOpenChange={(open) => (open ? null : closeSheet())}>
+    <Sheet open={isOpen} >
       <SheetContent side="right" className="w-[400px]">
         <SheetHeader>
           <SheetTitle>Chat Panel</SheetTitle>

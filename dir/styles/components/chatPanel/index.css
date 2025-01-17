@@ -55,4 +55,8 @@
     background-color: var(--chatbox-component-bg-hover);
   }
 
+  .custom-pointer-events-auto {
+    pointer-events: auto !important;
+  }
+
 }
