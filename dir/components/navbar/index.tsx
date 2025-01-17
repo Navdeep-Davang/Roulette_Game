@@ -7,7 +7,7 @@ import React from "react";
 import useSubHeaderStore from "@/dir/states/SubHeader/store";
 
 const NavBar = () => {
-  const { toggleSubHeader } = useSubHeaderStore();
+  const { isSubHeaderVisible, toggleSubHeader } = useSubHeaderStore();
 
   return (
     <div>
@@ -40,8 +40,8 @@ const NavBar = () => {
           <MessageCircleIcon className="w-8 h-8 icon-custom-orange cursor-pointer lg:hidden" />
 
           <div 
-            className="p-1 border icon-custom-orange rounded-md"
-            onClick={toggleSubHeader} // Toggle subheader
+            className={`p-1 border icon-custom-orange rounded-md ${isSubHeaderVisible ? 'burger-menu active' : ''}`}
+            onClick={toggleSubHeader} 
           >          
             <MenuIcon className="w-8 h-8 cursor-pointer lg:hidden" />
           </div>
