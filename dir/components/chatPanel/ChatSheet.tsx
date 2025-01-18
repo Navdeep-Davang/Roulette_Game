@@ -8,7 +8,7 @@ const ChatSheet = () => {
 
   return (
     <Sheet open={isOpen} >
-      <SheetContent side="right" className="w-[400px]">
+      <SheetContent side="right" className="w-full">
         <SheetHeader>
           <SheetTitle>Chat Panel</SheetTitle>
         </SheetHeader>

@@ -3,18 +3,14 @@
 import { MenuIcon, MessageCircleIcon, Volume2 } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-// import SubHeader from "./SubHeader"; // Import SubHeader component
 import useSubHeaderStore from "@/dir/states/SubHeader";
 import { useSheetStore } from "@/dir/states/ChatSheet";
 
-const btnclick = () => {
-  console.log("clicked me")
-}
+
 
 const NavBar = () => {
-  const { isSubHeaderVisible, toggleSubHeader } = useSubHeaderStore();
+  const { isSubHeaderVisible, openSubHeader  } = useSubHeaderStore();
   const { isOpen, openSheet, closeSheet } = useSheetStore();
-
   return (
     <div>
       {/* Navbar */}
@@ -43,13 +39,6 @@ const NavBar = () => {
           </button>
 
           {/* On smaller Device */}
-           <button 
-            className="lg:hidden bg-white"
-            onClick={() => btnclick()}
-            >
-            
-              Click me
-           </button>
           <div 
             className={`p-1 lg:hidden cursor-pointer icon-custom-orange ${isOpen ? 'active' : ''}`}
             onClick={() => isOpen ? closeSheet() : openSheet()}
@@ -57,9 +46,9 @@ const NavBar = () => {
             <MessageCircleIcon className="w-8 h-8 " />
           </div>
           
-          <div 
-            className={`p-1 border icon-custom-orange rounded-md ${isSubHeaderVisible ? 'burger-menu active' : ''}`}
-            onClick={toggleSubHeader} 
+          <div
+            className={`p-1 border icon-custom-orange rounded-md ${isSubHeaderVisible ? 'burger-menu active pointer-events-none' : ''}`}
+            onClick={() => !isSubHeaderVisible && openSubHeader()}  
           >          
             <MenuIcon className="w-8 h-8 cursor-pointer lg:hidden" />
           </div>
