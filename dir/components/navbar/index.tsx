@@ -47,10 +47,10 @@ const NavBar = () => {
           </div>
           
           <div
-            className={`p-1 border icon-custom-orange rounded-md ${isSubHeaderVisible ? 'burger-menu active pointer-events-none' : ''}`}
+            className={`p-1 lg:hidden border icon-custom-orange rounded-md ${isSubHeaderVisible ? 'burger-menu active pointer-events-none' : ''}`}
             onClick={() => !isSubHeaderVisible && openSubHeader()}  
           >          
-            <MenuIcon className="w-8 h-8 cursor-pointer lg:hidden" />
+            <MenuIcon className="w-8 h-8 cursor-pointer " />
           </div>
           
         </div>

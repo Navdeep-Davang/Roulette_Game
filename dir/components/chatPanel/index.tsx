@@ -3,9 +3,9 @@ import React from 'react';
 
 const ChatPanel = () => {
   return (
-    <div className= "h-full w-full p-2 chatbox-panal flex-col items-start inline-flex">
+    <div className= "h-full w-full p-4 chatbox-panal flex-col items-start inline-flex">
       {/* Chatbox Title */}
-      <div className="chatbox-title self-stretch p-2 rounded justify-between items-center inline-flex">
+      <div className="chatbox-title self-stretch p-4 rounded-md justify-between items-center inline-flex">
         <div className="chatbox-title-text w-16 h-6 text-base cursor-default">
           Chatbox
         </div>
@@ -21,8 +21,8 @@ const ChatPanel = () => {
       <div className="h-full w-full bg-amber-300 " />
 
       {/* Chatbox Footer */}
-      <div className="chatbox-footer w-full p-2 pl-3 gap-2 rounded justify-between items-center inline-flex">
-        <div className="status-info-text justify-center text-xs">
+      <div className="chatbox-footer w-full p-4 gap-2 rounded-md justify-between items-center inline-flex">
+        <div className="status-info-text justify-center text-sm">
           You must be logged in to chat.
         </div>
         <div className="p-1.5 send-bg cursor-pointer rounded-full flex-col justify-center items-center inline-flex">
