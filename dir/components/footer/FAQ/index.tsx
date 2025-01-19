@@ -15,13 +15,13 @@ export function FAQ() {
       </DialogTitle>
       <DialogTrigger asChild>
           <div className="px-2.5 border-r footer-border justify-center items-start flex">
-          <div className="footer-text text-center text-xs font-normal leading-none">
+            <div className="footer-text text-center text-xs font-normal leading-none">
               FAQ
-          </div>
+            </div>
           </div>
       </DialogTrigger>
       <DialogContent 
-        className="w-4/5 h-3/4 p-4 bg-[#191d25] rounded-2xl border-2 border-[#ffa31a] flex-col justify-start items-center gap-1 inline-flex overflow-auto"
+        className="sm:w-4/5 w-11/12 h-3/4 p-4 bg-[#191d25] rounded-2xl border-2 border-[#ffa31a] flex-col justify-start items-center gap-1 inline-flex overflow-auto"
         onInteractOutside={(e) => {
           e.preventDefault();
         }}
@@ -31,12 +31,12 @@ export function FAQ() {
             <X className="text-white hover:text-[#ffa31a] items-end cursor-pointer"/>
           </DialogClose>
         </DialogHeader>
-        <div className="self-stretch h-full px-4 pb-2 flex-col justify-start items-center gap-8 flex overflow-hidden">
+        <div className="self-stretch h-full lg:px-4 px-0 pb-2 flex-col justify-start items-center gap-8 flex overflow-hidden">
           <div className="py-1 border-b-2 border-white justify-center items-center gap-2.5 inline-flex">
             <div className="text-white text-[20px] font-bold">FAQ</div>
           </div>
-          <Accordion type="single" collapsible className="self-stretch custom-scrollbar px-6 flex-1 flex-col justify-start items-center gap-6 flex overflow-y-auto">
-            <AccordionItem value="item-1" className="text-white w-4/5">
+          <Accordion type="single" collapsible className="self-stretch custom-scrollbar  sm:px-4  px-2 flex-1 flex-col justify-start items-center gap-6 flex overflow-y-auto">
+            <AccordionItem value="item-1" className="text-white md:w-4/5 w-full">
               <AccordionTrigger className="text-[16px]">What is Casino?</AccordionTrigger>
               <AccordionContent className="text-[16px]">
               <p>
@@ -44,7 +44,7 @@ export function FAQ() {
               </p>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-2" className="text-white w-4/5">
+            <AccordionItem value="item-2" className="text-white md:w-4/5 w-full">
               <AccordionTrigger className="text-[16px]">How does Casino work?</AccordionTrigger>
               <AccordionContent className="text-[16px]">
               <p>
@@ -52,7 +52,7 @@ export function FAQ() {
               </p>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-3" className="text-white w-4/5">
+            <AccordionItem value="item-3" className="text-white md:w-4/5 w-full">
               <AccordionTrigger className="text-[16px]">Is Casino secure?</AccordionTrigger>
               <AccordionContent className="text-[16px]">
               <p>
@@ -60,7 +60,7 @@ export function FAQ() {
               </p>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-4" className="text-white w-4/5">
+            <AccordionItem value="item-4" className="text-white md:w-4/5 w-full">
               <AccordionTrigger className="text-[16px]">What types of games are available on Casino?</AccordionTrigger>
               <AccordionContent className="text-[16px]">
               <ul>
@@ -73,7 +73,7 @@ export function FAQ() {
               </ul>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-5" className="text-white w-4/5">
+            <AccordionItem value="item-5" className="text-white md:w-4/5 w-full">
               <AccordionTrigger className="text-[16px]">How can I create an account on Casino?</AccordionTrigger>
               <AccordionContent className="text-[16px]">
               <ol>
@@ -83,7 +83,7 @@ export function FAQ() {
               </ol>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-6" className="text-white w-4/5">
+            <AccordionItem value="item-6" className="text-white md:w-4/5 w-full">
               <AccordionTrigger className="text-[16px]">What cryptocurrencies are supported?</AccordionTrigger>
               <AccordionContent className="text-[16px]">
               <ul>
@@ -94,7 +94,7 @@ export function FAQ() {
               </ul>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-7" className="text-white w-4/5">
+            <AccordionItem value="item-7" className="text-white md:w-4/5 w-full">
               <AccordionTrigger className="text-[16px]">How do I deposit funds?</AccordionTrigger>
               <AccordionContent className="text-[16px]">
               <ol>
@@ -104,7 +104,7 @@ export function FAQ() {
               </ol>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-8" className="text-white w-4/5">
+            <AccordionItem value="item-8" className="text-white md:w-4/5 w-full">
               <AccordionTrigger className="text-[16px]">Are my funds safe?</AccordionTrigger>
               <AccordionContent className="text-[16px]">
               <p>

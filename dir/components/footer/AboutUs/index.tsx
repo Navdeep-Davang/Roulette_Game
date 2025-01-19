@@ -25,7 +25,7 @@ export function AboutUs() {
           </div>
       </DialogTrigger>
       <DialogContent 
-        className="w-4/5 h-3/4 p-4 bg-[#191d25] rounded-2xl border-2 border-[#ffa31a] flex-col justify-start items-center gap-1 inline-flex overflow-auto"
+        className="sm:w-4/5 w-11/12 h-3/4 p-4 bg-[#191d25] rounded-2xl border-2 border-[#ffa31a] flex-col justify-start items-center gap-1 inline-flex overflow-auto"
         onInteractOutside={(e) => {
           e.preventDefault();
         }}
@@ -35,7 +35,7 @@ export function AboutUs() {
             <X className="text-white hover:text-[#ffa31a] items-end cursor-pointer"/>
           </DialogClose>
         </DialogHeader>
-        <div className="self-stretch h-full px-4 pb-2 flex-col justify-start items-center gap-8 flex overflow-hidden">
+        <div className="self-stretch h-full sm:px-4 px-2 pb-2 flex-col justify-start items-center gap-8 flex overflow-hidden">
           <div className="py-1 border-b-2 border-white justify-center items-center gap-2.5 inline-flex">
             <div className="text-white text-[20px] font-bold">ABOUT US</div>
           </div>
