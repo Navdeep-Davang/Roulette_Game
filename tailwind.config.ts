@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss";
+import tailwindScrollbar from 'tailwind-scrollbar';
+
 
 import { animations } from "./dir/styles/config";
 
@@ -73,5 +75,7 @@ export default {
 		
   	}
   },
-  plugins: [],
+  plugins: [
+    tailwindScrollbar 
+  ],
 } satisfies Config;

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   /* Footer theme variables */
   :root {
@@ -38,4 +39,34 @@
   .footer-link:hover {
     color: rgba(255, 255, 255, 0.7);
   }
+
+
+  .custom-scrollbar {
+    @apply flex-1 overflow-y-auto;
+  
+    /* WebKit-based browsers (Chrome, Safari, etc.) */
+    &::-webkit-scrollbar {
+      width: 6px; /* Set scrollbar width */
+    }
+    &::-webkit-scrollbar-track {
+      @apply rounded-full bg-gray-100; /* Rounded track */
+    }
+    &::-webkit-scrollbar-thumb {
+      @apply rounded-full bg-gray-300; /* Rounded thumb */
+    }
+  
+    /* Dark mode styles */
+    &::-webkit-scrollbar-track {
+      @apply rounded-full bg-transparent; /* Dark mode track */
+    }
+    &::-webkit-scrollbar-thumb {
+      @apply rounded-full bg-neutral-400; /* Dark mode thumb */
+    }
+  }
+
+
 }
+
+
+
+
