@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { AboutUs } from "./AboutUs";
+import { Support } from "./Support";
 
 const Footer = () => {
   return (
@@ -19,11 +20,7 @@ const Footer = () => {
       {/* Links Section */}
       <div className="py-1 justify-center items-start gap-1 flex overflow-hidden">
         <AboutUs/>
-        <div className="px-2.5 border-r footer-border justify-center items-start flex">
-          <div className="footer-text text-center text-xs font-normal leading-none">
-            Support
-          </div>
-        </div>
+        <Support/>
         <div className="px-2.5 border-r footer-border justify-center items-start flex">
           <div className="footer-text text-center text-xs font-normal leading-none">
             FAQ

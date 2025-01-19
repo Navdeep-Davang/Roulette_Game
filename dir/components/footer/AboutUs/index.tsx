@@ -1,3 +1,5 @@
+'use client'
+
 import {
     Dialog,
     DialogTrigger,
@@ -22,10 +24,15 @@ export function AboutUs() {
           </div>
           </div>
       </DialogTrigger>
-      <DialogContent className="w-4/5 h-3/4 p-4 bg-[#191d25] rounded-2xl border-2 border-[#ffa31a] flex-col justify-start items-center gap-1 inline-flex overflow-auto">
+      <DialogContent 
+        className="w-4/5 h-3/4 p-4 bg-[#191d25] rounded-2xl border-2 border-[#ffa31a] flex-col justify-start items-center gap-1 inline-flex overflow-auto"
+        onInteractOutside={(e) => {
+          e.preventDefault();
+        }}
+      >
         <DialogHeader className="self-stretch p-1 justify-end items-end gap-2.5 inline-flex">
           <DialogClose asChild>
-            <X className="text-white hover:border-[#ffa31a] items-end cursor-pointer"/>
+            <X className="text-white hover:text-[#ffa31a] items-end cursor-pointer"/>
           </DialogClose>
         </DialogHeader>
         <div className="self-stretch h-full px-4 pb-2 flex-col justify-start items-center gap-8 flex overflow-hidden">
