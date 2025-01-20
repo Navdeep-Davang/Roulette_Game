@@ -11,6 +11,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { X } from "lucide-react";
 import Overview from "./Overview";
+import Implementation from "./Implementation";
 
 export function ProvablyFair() {
     return (
@@ -53,10 +54,12 @@ export function ProvablyFair() {
                     </TabsList>
 
                     <div className="flex-1 tabs-content-parent h-full overflow-y-auto custom-scrollbar">
-                      <TabsContent value="overview" className="tabs-content">
+                      <TabsContent value="overview">
                         <Overview />
                       </TabsContent>
-                      <TabsContent value="implementation">Implementation</TabsContent>
+                      <TabsContent value="implementation">
+                        <Implementation/>
+                      </TabsContent>
                       <TabsContent value="current-seed-pair">current-seed-pair</TabsContent>
                       <TabsContent value="copy-seed-pair">copy-seed-pair</TabsContent>
                       <TabsContent value="calculation">calculation</TabsContent>
