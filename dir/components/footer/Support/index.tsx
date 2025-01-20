@@ -11,7 +11,7 @@ import {
 import { X } from "lucide-react";
 import { SupportForm } from "./SupportForm";
 
-//TODO support dialog on the mobie view 
+
 export function Support() {
   return (
     <Dialog>
@@ -40,35 +40,7 @@ export function Support() {
           <div className="py-1 border-b-2 border-white justify-center items-center gap-2.5 inline-flex">
             <div className="text-white text-[20px] font-bold">SUPPORT</div>
           </div>
-          {/* <div className="self-stretch h-auto flex-col justify-start items-start gap-2 flex">
-            <div className="text-[#767c8a] text-[16px]   font-medium">
-              Email address
-            </div>
-            <div className="self-stretch h-auto p-3 rounded-lg border border-[#767c8a] flex-col justify-start items-start align-center gap-2.5 flex overflow-hidden">
-              <div className="text-[#767c8a] text-[16px]  font-medium">
-                Enter email
-              </div>
-            </div>
-          </div>
-          <div className="self-stretch h-auto flex-col justify-start items-start gap-2 flex overflow-hidden">
-            <div className="text-[#767c8a] text-[16px]  font-medium">
-              Description
-            </div>
-            <div className="self-stretch h-auto p-3 rounded-lg border border-[#767c8a] flex-col justify-start items-start gap-2.5 flex overflow-hidden">
-              <div className="text-[#767c8a] text-[16px]  font-medium">
-                Description
-              </div>
-            </div>
-          </div>
-          <div className="self-stretch flex-col justify-start items-start gap-2.5 flex">
-            <div className="px-4 py-3 bg-[#ffa31a] rounded-lg flex-col justify-center items-center gap-2.5 flex">
-              <div className="text-[#0c1220] text-[16px]  font-bold">
-                SUBMIT
-              </div>
-            </div>
-          </div> */}
-
-          
+                
           <SupportForm/>
         </div>
 

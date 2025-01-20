@@ -3,6 +3,7 @@ import React from "react";
 import { AboutUs } from "./AboutUs";
 import { Support } from "./Support";
 import { FAQ } from "./FAQ";
+import { ProvablyFair } from "./ProvablyFair";
 
 const Footer = () => {
   return (
@@ -23,11 +24,7 @@ const Footer = () => {
         <AboutUs/>
         <Support/>
         <FAQ/>
-        <div className="px-2.5 justify-center items-start flex">
-          <div className="footer-text text-center text-xs font-normal leading-none">
-            Provably Fair
-          </div>
-        </div>
+        <ProvablyFair/>
       </div>
 
       {/* Logo Image Section */}
