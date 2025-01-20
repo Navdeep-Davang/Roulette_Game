@@ -12,6 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { X } from "lucide-react";
 import Overview from "./Overview";
 import Implementation from "./Implementation";
+import CurrentSeedPair from "./CurrentSeedPair";
 
 export function ProvablyFair() {
     return (
@@ -60,7 +61,10 @@ export function ProvablyFair() {
                       <TabsContent value="implementation">
                         <Implementation/>
                       </TabsContent>
-                      <TabsContent value="current-seed-pair">current-seed-pair</TabsContent>
+                      {/* To align the items in the parent in the center, put the flex on the parent  */}
+                      <TabsContent value="current-seed-pair" className="flex justify-center items-center">
+                        <CurrentSeedPair/>
+                      </TabsContent>
                       <TabsContent value="copy-seed-pair">copy-seed-pair</TabsContent>
                       <TabsContent value="calculation">calculation</TabsContent>
                     </div>
