@@ -44,7 +44,7 @@ export function ProvablyFair() {
                   {/* Overflow hidden is necessory on the div along with the flex-1 on the parent so that the div only occupy remaining space of its parent
                   and not exceed to occupy more space */}
                   <Tabs defaultValue="overview" className="w-full gap-4 flex flex-col flex-1 overflow-hidden"> 
-                    <TabsList className=" text-white text-[16px] justify-around ">
+                    <TabsList className=" text-white text-[16px] justify-around border-b-2 border-white">
                       <TabsTrigger value="overview" >Overview</TabsTrigger>
                       <TabsTrigger value="implementation">Implementation</TabsTrigger>
                       <TabsTrigger value="current-seed-pair">Current Seed Pair</TabsTrigger>
