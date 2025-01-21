@@ -13,6 +13,7 @@ import { X } from "lucide-react";
 import Overview from "./Overview";
 import Implementation from "./Implementation";
 import CurrentSeedPair from "./CurrentSeedPair";
+import CopySeedPair from "./CopySeedPair";
 
 export function ProvablyFair() {
     return (
@@ -65,7 +66,9 @@ export function ProvablyFair() {
                       <TabsContent value="current-seed-pair" className="flex justify-center items-center">
                         <CurrentSeedPair/>
                       </TabsContent>
-                      <TabsContent value="copy-seed-pair">copy-seed-pair</TabsContent>
+                      <TabsContent value="copy-seed-pair" className="flex justify-center items-center">
+                        <CopySeedPair/>
+                      </TabsContent>
                       <TabsContent value="calculation">calculation</TabsContent>
                     </div>
                     
