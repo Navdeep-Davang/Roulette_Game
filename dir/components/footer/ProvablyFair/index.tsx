@@ -14,6 +14,7 @@ import Overview from "./Overview";
 import Implementation from "./Implementation";
 import CurrentSeedPair from "./CurrentSeedPair";
 import CopySeedPair from "./CopySeedPair";
+import Calculation from "./Calculation";
 
 export function ProvablyFair() {
     return (
@@ -69,7 +70,9 @@ export function ProvablyFair() {
                       <TabsContent value="copy-seed-pair" className="flex justify-center items-center">
                         <CopySeedPair/>
                       </TabsContent>
-                      <TabsContent value="calculation">calculation</TabsContent>
+                      <TabsContent value="calculation" className="flex justify-center items-center">
+                        <Calculation/>
+                      </TabsContent>
                     </div>
                     
                   </Tabs>                   
