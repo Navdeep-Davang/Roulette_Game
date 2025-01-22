@@ -5,11 +5,15 @@ import GameOverlay from './GameOverlay'
 
 
 export const Game = () => {
+  const futureTime = new Date();
+  futureTime.setMinutes(futureTime.getMinutes() + 1);
+
   return (
 
     <div className='flex flex-col gap-4'>
         <div className="relative w-full">
-            <GameOverlay/>
+          
+            <GameOverlay targetTime={futureTime} />
 
             {/* The actual content */}
             <div className='flex flex-col py-4 gap-2 items-center justify-center'>
