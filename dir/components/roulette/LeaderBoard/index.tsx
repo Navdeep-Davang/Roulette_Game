@@ -2,7 +2,7 @@ import React from 'react';
 
 const LeaderBoard = () => {
   return (
-    <div className="leaderboard-container p-6 justify-center items-center gap-8 flex flex-wrap">
+    <div className="leaderboard-container select-none p-6 justify-center items-center gap-8 flex flex-wrap">
       <div className="leaderboard-item w-full min-w-[200px] flex-col justify-center items-center">
         <div className="leaderboard-win-2x w-full  p-2 justify-center items-center">
           <div className="leaderboard-title text-center">Win 2X</div>

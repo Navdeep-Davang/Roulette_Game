@@ -22,7 +22,7 @@ const BetSlip = () => {
 
   return (
     <div className="bet-slip px-2 py-9 flex flex-wrap justify-center items-center gap-3">
-      <div className="bet-input h-10 px-2 flex justify-center items-center gap-2 overflow-hidden">
+      <div className="bet-input select-none h-10 px-2 flex justify-center items-center gap-2 overflow-hidden">
         <Image
           className="w-6 h-6"
           src="/roulette/Coin.png"

@@ -10,9 +10,11 @@
     --bet-input-border: rgba(255, 164, 26, 0.2);
     --bet-button-bg: #191d25;
     --bet-button-border: rgba(255, 164, 26, 0.2);
-    --bet-max-button-text: #ffa31a;
+    --bet-max-button-text: var(--custom-orange);
+    --bet-button-bg-hover: var(--custom-orange);
     --bet-clear-bg: #ff0000;
     --bet-clear-shadow: inset 0px 0px 7px 4px rgba(180, 21, 21, 1.0);
+    --bet-clear-shadow-hover: inset 0px 0px 7px 4px rgb(25, 29, 36, 0.4);
     --text-primary: #ffffff;
     --text-secondary: rgba(255, 255, 255, 0.5);
   }
@@ -42,6 +44,9 @@
     border: 1px solid var(--bet-button-border);
     border-radius: 0.5rem;
     }
+    .bet-button:hover {
+      background-color: var(--bet-button-bg-hover)
+    }
 
     .bet-max-button {
     background-color: var(--bet-button-bg);
@@ -53,6 +58,11 @@
     letter-spacing: 0.05em;
     }
 
+    .bet-max-button:hover {
+      background-color: var(--bet-button-bg-hover);
+      color: white;
+    }
+
     /* Clear button */
     .bet-clear-button {
     background-color: var(--bet-clear-bg);
@@ -62,5 +72,16 @@
     font-weight: 700; /* font-bold */
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    }
+
+    .bet-clear-button:hover {
+      background-color: var(--bet-button-bg-hover);
+      box-shadow: var(--bet-clear-shadow-hover);
+    }
+
+    .bet-button,
+    .bet-max-button,
+    .bet-clear-button {
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     }
 }

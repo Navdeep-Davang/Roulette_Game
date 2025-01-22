@@ -33,7 +33,7 @@ const Wheel = () => {
 
   return (
     <div
-      className="wheel-container overflow-clip w-full flex h-20 justify-center items-center gap-2.5"
+      className="wheel-container select-none overflow-clip w-full flex h-20 justify-center items-center gap-2.5"
     >
       {wheelData.map((item, index) => (
         <div
