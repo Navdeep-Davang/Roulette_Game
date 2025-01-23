@@ -6,7 +6,7 @@ import GameOverlay from './GameOverlay'
 
 export const Game = () => {
   const futureTime = new Date();
-  futureTime.setMinutes(futureTime.getMinutes() + 1);
+  futureTime.setMinutes(futureTime.getMinutes() + 0);
 
   return (
 
@@ -16,10 +16,10 @@ export const Game = () => {
             <GameOverlay targetTime={futureTime} />
 
             {/* The actual content */}
-            <div className='flex flex-col py-4 gap-2 items-center justify-center'>
-            <SolidArrow className="rotate-180" />
-            <Wheel />
-            <SolidArrow />
+            <div className='flex flex-col relative py-4 gap-2 items-center justify-center'>
+              <SolidArrow className="rotate-180" />
+              <Wheel />
+              <SolidArrow />
             </div>
 
             {/* Gradient overlay */}
