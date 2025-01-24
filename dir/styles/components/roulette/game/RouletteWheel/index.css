@@ -1,0 +1,29 @@
+.row {
+    display: flex;
+  }
+  
+  .card {
+    height: 85px;
+    width: 85px;
+    margin: 3px;
+    border-radius: 8px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+  }
+  
+  .red {
+    background-color: #f95146;
+  }
+  
+  .black {
+    background-color: #2d3035;
+  }
+  
+  .green {
+    background-color: #00c74d;
+  }
+  

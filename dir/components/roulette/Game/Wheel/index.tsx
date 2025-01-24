@@ -1,110 +1,94 @@
-'use client';
+'use client'
 
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-const wheelData = [
-  { value: "14", colorClass: "gradient-dark" },
-  { value: "3", colorClass: "gradient-red" },
-  { value: "12", colorClass: "gradient-dark" },
-  { value: "1", colorClass: "gradient-red" },
-  { value: "12", colorClass: "gradient-dark" },
-  { value: "5", colorClass: "gradient-red" },
-  { value: "10", colorClass: "gradient-dark" },
-  { value: "7", colorClass: "gradient-red" },
-  { value: "8", colorClass: "gradient-dark" },
-  {
-    value: (
-      <Image
-        className="wheel-icon"
-        src="/roulette/Sign.png"
-        alt="Special Icon"
-        width={70}
-        height={70}
-      />
-    ),
-    colorClass: "gradient-green",
-  },
-  { value: "9", colorClass: "gradient-red" },
-  { value: "8", colorClass: "gradient-dark" },
-  { value: "11", colorClass: "gradient-red" },
-  { value: "14", colorClass: "gradient-dark" },
-  { value: "1", colorClass: "gradient-red" },
-];
-
-
 
 const Wheel = () => {
- 
-
-  const [winner, setWinner] = useState<string | React.JSX.Element | null>(null);
-  const sliderRef = useRef<Slider | null>(null);
-
-  const drawWinner = () => {
-    const randomIndex = Math.floor(Math.random() * wheelData.length);
-    setWinner(wheelData[randomIndex].value);
-
-    // Smooth scroll to the winner slide based on the index
-    if (sliderRef.current) {
-      sliderRef.current.slickGoTo(randomIndex);
-    }
-  };
-
-
-
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5, // Adjust based on your design
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 20,
-    pauseOnHover: true,
-    arrows: false,
-    centerMode: true,
-    centerPadding: '20px',
-    variableWidth: true,
-    beforeChange: (currentSlide: number, nextSlide: number) => {
-      if (nextSlide < currentSlide) {
-        return false; // Prevent backward slide
-      }
+  const wheelData = [
+    { value: "14", colorClass: "gradient-dark" },
+    { value: "3", colorClass: "gradient-red" },
+    { value: "12", colorClass: "gradient-dark" },
+    { value: "1", colorClass: "gradient-red" },
+    { value: "12", colorClass: "gradient-dark" },
+    { value: "5", colorClass: "gradient-red" },
+    { value: "10", colorClass: "gradient-dark" },
+    { value: "7", colorClass: "gradient-red" },
+    { value: "8", colorClass: "gradient-dark" },
+    {
+      value: (
+        <Image
+          className="wheel-icon"
+          src="/roulette/Sign.png"
+          alt="0"
+          width={70}
+          height={70}
+        />
+      ),
+      colorClass: "gradient-green",
     },
+    { value: "9", colorClass: "gradient-red" },
+    { value: "8", colorClass: "gradient-dark" },
+    { value: "11", colorClass: "gradient-red" },
+    { value: "14", colorClass: "gradient-dark" },
+    { value: "1", colorClass: "gradient-red" },
+  ];
+
+  const [wheelRotation, setWheelRotation] = useState(0);
+
+  const spinWheel = (targetValue: number) => {
+    const order = [0, 11, 5, 10, 6, 9, 7, 8, 1, 14, 2, 13, 3, 12, 4];
+    const position = order.indexOf(targetValue);
+    const rows = 12;
+    const card = 85; // Width of the wheel item + margin
+    const landingPosition = (rows * 15 * card) + (position * card);
+    const randomize = Math.floor(Math.random() * 75) - 37;
+
+    const finalPosition = landingPosition + randomize;
+    setWheelRotation(finalPosition);
+
+    // Applying smooth transition and reset
+    setTimeout(() => {
+      setWheelRotation(-(position * card + randomize)); // Reset position after spinning
+    }, 6000); // After 6 seconds, reset the wheel
   };
 
-  
   return (
-    <div className="wheel-container w-full">
-      <div className="carousel-wrapper select-none w-full flex flex-col items-center">
-        <Slider {...settings} 
-          className="w-full"
-          ref={sliderRef}
+    <div className="w-full">
+      <div className="wheel-container">
+        <div className="wheel-selector"></div>
+        <div
+          className="wheel-content"
+          style={{
+            transform: `translate3d(-${wheelRotation}px, 0, 0)`, // Use translate3d for smoother animations
+            transition: "transform 6s cubic-bezier(0.1, 0.75, 0.25, 1)", // Add cubic-bezier for smoother easing
+            willChange: "transform",
+          }}
         >
           {wheelData.map((item, index) => (
-            <div key={index} className="item-card mx-2 justify-center items-center">
-              <div
-                className={`wheel-item w-[85px] h-20 pt-7 pb-6 rounded-lg flex-col justify-center items-center inline-flex ${item.colorClass}`}
-              >
-                <div className="wheel-text min-w-8 text-center text-xl font-normal">
-                  {item.value}
-                </div>
-              </div>
+            <div
+              key={index}
+              className={`wheel-item ${item.colorClass}`}
+            >
+              <div className="wheel-text">{item.value}</div>
             </div>
           ))}
-        </Slider>
+        </div>
+      </div>
+
+      <div className="mt-4 flex justify-center items-center gap-2">
+        <input
+          type="number"
+          placeholder="Outcome"
+          className="px-2 py-1 rounded border border-gray-300"
+          min="0"
+          max="14"
+        />
         <button
-          onClick={drawWinner}
-          className="draw-winner-btn mt-6 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          className="px-4 py-2 bg-blue-500 text-white rounded"
+          onClick={() => spinWheel(12)} // You can replace 12 with the desired value
         >
-          Draw Winner
+          Spin Wheel
         </button>
-        {winner && (
-          <div className="winner-display mt-4 text-center text-2xl font-bold text-green-600">
-            Winner: {typeof winner === "string" ? winner : "Special Icon"}
-          </div>
-        )}
       </div>
     </div>
   );

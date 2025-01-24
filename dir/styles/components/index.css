@@ -2,3 +2,4 @@
 @import "./footer/index.css";
 @import "./chatPanel/index.css";
 @import "./roulette/index.css";
+@import "./roulette/game/RouletteWheel/index.css"

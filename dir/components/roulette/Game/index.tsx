@@ -1,7 +1,8 @@
 import React from 'react'
 import SolidArrow from '../../svg/SolidArrow'
-import Wheel from './Wheel'
+// import Wheel from './Wheel'
 import GameOverlay from './GameOverlay'
+import RouletteWheel from './RouletteWheel'
 
 
 export const Game = () => {
@@ -18,7 +19,11 @@ export const Game = () => {
             {/* The actual content */}
             <div className='flex flex-col py-4 gap-2 items-center justify-center'>
               <SolidArrow className="rotate-180" />
-              <Wheel />
+              
+              <RouletteWheel/>
+              
+              {/* <Wheel /> */}
+              
               <SolidArrow />
             </div>
 
