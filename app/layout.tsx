@@ -37,12 +37,12 @@ export default function RootLayout({
         <div className="relative min-h-screen flex flex-col">
           <NavBar /> {/* Sticky Navbar */}
           
-          <main className="relative flex flex-row flex-grow overflow-hidden"> {/* Main Content Area with flex for left and right sections */}
+          <main className="relative w-full flex flex-row flex-grow overflow-hidden"> {/* Main Content Area with flex for left and right sections */}
               <SubHeader />
               <ChatSheet/>
 
               {/* Left section for the main content */}           
-              <div className="flex-grow overflow-auto"
+              <div className="flex-grow w-full overflow-auto"
                 style={{
                   backgroundImage: "url('/roulette/Grad_Bg.PNG')",
                   backgroundSize: "cover", 

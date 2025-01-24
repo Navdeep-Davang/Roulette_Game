@@ -16,14 +16,14 @@ export const Game = () => {
             <GameOverlay targetTime={futureTime} />
 
             {/* The actual content */}
-            <div className='flex flex-col relative py-4 gap-2 items-center justify-center'>
+            <div className='flex flex-col py-4 gap-2 items-center justify-center'>
               <SolidArrow className="rotate-180" />
               <Wheel />
               <SolidArrow />
             </div>
 
             {/* Gradient overlay */}
-            <div className="absolute inset-0 overlay" />
+            <div className="absolute hidden inset-0 overlay" />
         </div>
 
         <div className="text-center select-none text-white text-sm">PREVIOUS ROLLS</div>

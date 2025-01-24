@@ -14,35 +14,6 @@
     --text-white: #ffffff;
   }
 
-  
-  .wheel-container {
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .wheel-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  .wheel-items {
-    display: flex;
-    position: relative;
-  }
-  
-  .wheel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
   /* Gradient styles */
   .gradient-dark {
     background: linear-gradient(to top, var(--gradient-dark-start), var(--gradient-dark-end));
