@@ -1,10 +1,10 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react';
+import { useRouletteStore } from '@/dir/states/roulette/RouletteWheel';
+import React, { useRef, useEffect } from 'react';
 
 const RouletteWheel: React.FC = () => {
-  const [spinning, setSpinning] = useState(false);
-  const [outcome, setOutcome] = useState<number | null>(null);
+  const { spinning, outcome, stopSpin } = useRouletteStore();
   const wheelRef = useRef<HTMLDivElement | null>(null);
 
   // Initialize the wheel when the component mounts
@@ -42,63 +42,41 @@ const RouletteWheel: React.FC = () => {
     }
   };
   
+  useEffect(() => {
+    initWheel();
+  }, []);
   
+
+
   // Function to spin the wheel based on the outcome
-  const spinWheel = (roll: number) => {
-    if (wheelRef.current && !spinning) {
-      setSpinning(true);
+  useEffect(() => {
+    if (spinning && outcome !== null && wheelRef.current) {
       const wheel = wheelRef.current;
       const order = [0, 11, 5, 10, 6, 9, 7, 8, 1, 14, 2, 13, 3, 12, 4];
-      const position = order.indexOf(roll);
-  
+      const position = order.indexOf(outcome);
       const rows = 12;
       const cardWidth = 85 + 3 * 2;
       const landingPosition = rows * 15 * cardWidth + position * cardWidth;
-  
       const randomize = Math.floor(Math.random() * 85) - 85 / 2;
       const landingPositionWithRandomize = landingPosition + randomize;
-  
-      console.log(`Spin Position: ${position}`);
-      console.log(`Card Width: ${cardWidth}`);
-      console.log(`Landing Position: ${landingPosition}`);
-      console.log(`Randomize: ${randomize}`);
-      console.log(`Landing Position with Randomize: ${landingPositionWithRandomize}`);
 
-      const randomX = Math.floor(Math.random() * 50) / 100;
-      const randomY = Math.floor(Math.random() * 20) / 100;
-  
-      wheel.style.transitionTimingFunction = `cubic-bezier(0, ${randomX}, ${randomY}, 1)`;
+      wheel.style.transitionTimingFunction = `cubic-bezier(0, ${Math.random()}, ${Math.random()}, 1)`;
       wheel.style.transitionDuration = '6s';
       wheel.style.transform = `translate3d(-${landingPositionWithRandomize}px, 0, 0)`;
-  
+
       setTimeout(() => {
         // Disable transition for the instant reset
         wheel.style.transition = 'none';
         const resetTo = -(position * cardWidth + randomize);
         wheel.style.transform = `translate3d(${resetTo}px, 0, 0)`;
-  
-        // Force a reflow to apply the transform without transition
-        void wheel.offsetHeight;
-  
-        // Re-enable transitions for future spins
+        void wheel.offsetHeight; // Force reflow
         wheel.style.transition = '';
-        setSpinning(false);
+        stopSpin(); // Stop spinning state
       }, 6000);
     }
-  };
-  
-  
+  }, [spinning, outcome, stopSpin]);
 
-  // Handle Spin button click
-  const handleSpin = () => {
-    if (outcome !== null && outcome >= 0)  {
-      spinWheel(outcome);
-    }
-  };
 
-  useEffect(() => {
-    initWheel();
-  }, []);
 
   return (
     
@@ -114,26 +92,7 @@ const RouletteWheel: React.FC = () => {
           ref={wheelRef}
             className="wheel w-full flex justify-center items-center transition-transform duration-[6s] ease-in-out"
         />
-      </div>
-
-
-      {/* Hidden UI to test the working of the wheel */}
-      <div className="mt-8 text-center hidden">
-        <input
-          className="p-2 rounded-md bg-white text-black"
-          placeholder="Enter outcome"
-          type="number"
-          value={outcome ?? ''}
-          onChange={(e) => setOutcome(Number(e.target.value))}
-        />
-        <button
-          className="ml-4 py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-          onClick={handleSpin}
-          disabled={spinning}
-        >
-          {spinning ? 'Spinning...' : 'Spin Wheel'}
-        </button>
-      </div>
+      </div>     
 
     </div>
   );
