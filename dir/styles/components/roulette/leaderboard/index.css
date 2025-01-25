@@ -5,8 +5,10 @@
 @layer base {
   /* Theming variables for the leaderboard */
   :root {
-    --leaderboard-win-gradient-1: #fc0430;
-    --leaderboard-win-gradient-2: #aa0019;
+    --leaderboard-win-2X-red-gradient-1: #fc0430;
+    --leaderboard-win-2X-red-gradient-2: #aa0019;
+    --leaderboard-win-2X-black-gradient-1: #2e393b;
+    --leaderboard-win-2X-black-gradient-2: #1c2727;
     --leaderboard-win-14x-gradient-1: #1abe8f;
     --leaderboard-win-14x-gradient-2: #52e27a;
     --leaderboard-win-gradient-3: #414747;
@@ -39,8 +41,13 @@
   }
 
   /* Win 2X or Win 14X gradient background */
-  .leaderboard-win-2x {
-    background: linear-gradient(to top right, var(--leaderboard-win-gradient-1), var(--leaderboard-win-gradient-2));
+  .leaderboard-win-2x-red {
+    background: linear-gradient(to top right, var(--leaderboard-win-2X-red-gradient-1), var(--leaderboard-win-2X-red-gradient-2));
+    border-radius: 0.75rem;
+  }
+
+  .leaderboard-win-2x-black {
+    background: linear-gradient(to top right, var(--leaderboard-win-2X-black-gradient-1), var(--leaderboard-win-2X-black-gradient-2));
     border-radius: 0.75rem;
   }
 
