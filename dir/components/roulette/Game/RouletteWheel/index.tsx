@@ -101,16 +101,24 @@ const RouletteWheel: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-[#191B28] p-8 w-full flex flex-col items-center">
+    
+    <div className="select-none px-4 py-0 w-full flex flex-col items-center">      
+
       <div className="roulette-wrapper relative flex justify-center w-full mx-auto overflow-hidden">
-        <div className="selector absolute left-1/2 transform -translate-x-1/2 w-px bg-gray-500 h-full z-20" />
+        
+
+        {/* Hidden selector Bar to visually show the selected number */}
+        <div className="selector hidden absolute left-1/2 transform -translate-x-1/2 w-px bg-[#FFA41A] h-full z-20" />
+
         <div
           ref={wheelRef}
             className="wheel w-full flex justify-center items-center transition-transform duration-[6s] ease-in-out"
         />
       </div>
 
-      <div className="mt-8 text-center">
+
+      {/* Hidden UI to test the working of the wheel */}
+      <div className="mt-8 text-center hidden">
         <input
           className="p-2 rounded-md bg-white text-black"
           placeholder="Enter outcome"
@@ -126,6 +134,7 @@ const RouletteWheel: React.FC = () => {
           {spinning ? 'Spinning...' : 'Spin Wheel'}
         </button>
       </div>
+
     </div>
   );
 };

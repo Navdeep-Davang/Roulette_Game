@@ -21,14 +21,12 @@ export const Game = () => {
               <SolidArrow className="rotate-180" />
               
               <RouletteWheel/>
-              
-              {/* <Wheel /> */}
-              
+                            
               <SolidArrow />
             </div>
 
             {/* Gradient overlay */}
-            <div className="absolute hidden inset-0 overlay" />
+            <div className="absolute inset-0 overlay" />
         </div>
 
         <div className="text-center select-none text-white text-sm">PREVIOUS ROLLS</div>

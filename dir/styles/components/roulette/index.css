@@ -4,7 +4,7 @@
 
 @import "./leaderboard/index.css";
 @import "./betSlip/index.css";
-@import "./game/wheel/index.css";
+@import "./game/RouletteWheel/index.css";
 
 @layer base {
 .overlay {

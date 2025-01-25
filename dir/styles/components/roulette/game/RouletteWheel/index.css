@@ -15,15 +15,16 @@
     font-size: 1.5em;
   }
   
+  
   .red {
-    background-color: #f95146;
+    background: linear-gradient(to top, #aa0019, #fc0430);
   }
   
   .black {
-    background-color: #2d3035;
+    background: linear-gradient(to top, #2e393b, #1c2727);
   }
   
   .green {
-    background-color: #00c74d;
+    background: linear-gradient(to top, #52e27a, #1abe8f);
   }
   
