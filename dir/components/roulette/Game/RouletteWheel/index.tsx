@@ -1,10 +1,12 @@
 'use client'
 
 import { useRouletteStore } from '@/dir/states/roulette/RouletteWheel';
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import RouletteWheelSkeleton from './Skeleton';
 
 const RouletteWheel: React.FC = () => {
   const { spinning, outcome, stopSpin } = useRouletteStore();
+  const [loading, setLoading] = useState(true);
   const wheelRef = useRef<HTMLDivElement | null>(null);
 
   // Initialize the wheel when the component mounts
@@ -40,6 +42,8 @@ const RouletteWheel: React.FC = () => {
 
       rows.forEach(rowElement => wheel.appendChild(rowElement));
     }
+
+    setLoading(false);
   };
   
   useEffect(() => {
@@ -79,22 +83,28 @@ const RouletteWheel: React.FC = () => {
 
 
   return (
-    
-    <div className="select-none px-4 py-0 w-full flex flex-col items-center">      
+    <>
+     <div className="select-none px-4 py-0 w-full min-h-[85px] flex flex-col items-center">      
 
       <div className="roulette-wrapper relative flex justify-center w-full mx-auto overflow-hidden">
         
+        <RouletteWheelSkeleton
+          className={`${loading ? 'block' : 'hidden'}`} // Show when loading is true
+        />
 
         {/* Hidden selector Bar to visually show the selected number */}
         <div className="selector hidden absolute left-1/2 transform -translate-x-1/2 w-px bg-[#FFA41A] h-full z-20" />
 
         <div
           ref={wheelRef}
-            className="wheel w-full flex justify-center items-center transition-transform duration-[6s] ease-in-out"
+          className={`wheel w-full flex justify-center items-center transition-transform duration-[6s] ease-in-out ${loading ? 'hidden' : ''}`}
         />
       </div>     
 
-    </div>
+      </div>
+    </>
+    
+   
   );
 };
 

@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="justify-start items-center flex">
         <Image
           className="w-36 h-6 relative"
-          src="/navbar/RouletteLogo.png"
+          src="/navbar/SpinAndWinLogo.png"
           alt="Logo"
           width={144}
           height={24}

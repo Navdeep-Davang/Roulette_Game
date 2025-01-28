@@ -9,7 +9,7 @@ import { useRouletteStore } from '@/dir/states/roulette/RouletteWheel'
 
 export const Game = () => {
   const futureTime = new Date();
-  futureTime.setMinutes(futureTime.getMinutes() + 0);
+  futureTime.setSeconds(futureTime.getSeconds() + 20);
 
   const { outcome, setOutcome, spinning, startSpin } = useRouletteStore();
 
@@ -42,7 +42,7 @@ export const Game = () => {
         <div className="text-center select-none text-white text-sm">PREVIOUS ROLLS</div>
 
         {/* Interface to Control wheelspinning */}
-        <div className="mt-8 text-center">
+        <div className="mt-8 flex flex-wrap justify-center gap-4 text-center">
           <input
             className="p-2 rounded-md bg-white text-black"
             placeholder="Enter outcome"
@@ -51,7 +51,7 @@ export const Game = () => {
             onChange={(e) => setOutcome(Number(e.target.value))}
           />
           <button
-            className="ml-4 py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+            className="py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600"
             onClick={handleSpin}
             disabled={spinning}
           >
