@@ -62,6 +62,12 @@
     &::-webkit-scrollbar-thumb {
       @apply rounded-full bg-neutral-400; /* Dark mode thumb */
     }
+
+    @media (max-width: 640px) { /* For small devices */
+      &::-webkit-scrollbar {
+        width: 2px; /* Set to 2px on small devices */
+      }
+    }
   }
 
 

@@ -7,9 +7,9 @@ import { ProvablyFair } from "./ProvablyFair";
 
 const Footer = () => {
   return (
-    <div className="w-full p-4 footer-bg justify-between items-center inline-flex">
+    <div className="w-full p-4 footer-bg sm:justify-between justify-center items-center inline-flex">
       {/* Logo Section */}
-      <div className="justify-start items-center flex">
+      <div className="justify-start items-center hidden sm:flex">
         <Image
           className="w-36 h-6 relative"
           src="/navbar/SpinAndWinLogo.png"
@@ -28,7 +28,7 @@ const Footer = () => {
       </div>
 
       {/* Logo Image Section */}
-      <div className=" flex-col justify-center items-start inline-flex">
+      <div className=" flex-col justify-center items-start hidden sm:flex">
         <Image
           className=" cursor-pointer "
           src="/footer/DiscodIcon.png"

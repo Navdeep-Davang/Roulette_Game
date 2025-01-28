@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased custom-pointer-events-auto `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased custom-scrollbar custom-pointer-events-auto `}
       >
         <div className="relative min-h-screen flex flex-col">
           <NavBar /> {/* Sticky Navbar */}
