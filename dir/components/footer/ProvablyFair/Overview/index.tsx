@@ -2,7 +2,7 @@ import React from "react";
 
 const Overview = () => {
     return (
-        <div className="self-stretch flex flex-1 flex-col justify-start items-start gap-6 overflow-y-auto">
+        <div className="self-stretch flex flex-1 mx-2 flex-col justify-start items-start gap-6 overflow-y-auto">
             <div className="self-stretch text-white text-[16px] font-medium">
                 Provable fairness is a transparent way for us to guarantee as the operator that we are providing true randomness without manipulation.
             </div>

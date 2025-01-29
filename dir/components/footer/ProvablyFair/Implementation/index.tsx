@@ -2,7 +2,7 @@ import React from "react";
 
 const Implementation = () => {
     return (
-        <div className="self-stretch flex flex-1 flex-col justify-start items-start gap-6 overflow-y-auto">
+        <div className="self-stretch flex flex-1 mx-2 flex-col justify-start items-start gap-6 overflow-y-auto">
             <div className="self-stretch text-white text-[16px] font-medium">
                 For each verifiable bet, a client seed, a server seed, and a nonce are used as the input parameters for the{" "}
                 <span className="text-[#ffa31a]">random number generator</span>. Bytes are generated using the{" "}

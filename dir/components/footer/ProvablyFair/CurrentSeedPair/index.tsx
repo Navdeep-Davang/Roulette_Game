@@ -36,8 +36,8 @@ const CurrentSeedPair = () => {
 
                 {/* Nonce Section */}
                 <div className="self-stretch flex flex-col justify-start items-start gap-4">
-                    <div className="text-white text-xl font-medium">Nonce</div>
-                    <Input className="h-full rounded-lg border border-[#767c8a] text-white text-[16px] px-4 sm:py-2 py-3.5" placeholder="Type here..." />
+                  <div className="text-white text-xl font-medium">Nonce</div>
+                  <Input className="h-full rounded-lg border border-[#767c8a] text-white text-[16px] px-4 sm:py-2 py-3.5" placeholder="Type here..." />
                 </div>
             </div>
         </div>

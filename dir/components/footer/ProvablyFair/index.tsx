@@ -47,7 +47,7 @@ export function ProvablyFair() {
 
                   {/* Overflow hidden is necessory on the div along with the flex-1 on the parent so that the div only occupy remaining space of its parent
                   and not exceed to occupy more space */}
-                  <Tabs defaultValue="overview" className="w-full gap-4 flex flex-col flex-1 overflow-hidden"> 
+                  <Tabs defaultValue="overview" className="w-full gap-5 flex flex-col flex-1 overflow-hidden"> 
                     <TabsList className=" text-white text-[16px] flex-wrap justify-around border-b-2 border-white">
                       <TabsTrigger value="overview" >Overview</TabsTrigger>
                       <TabsTrigger value="implementation">Implementation</TabsTrigger>
@@ -64,13 +64,13 @@ export function ProvablyFair() {
                         <Implementation/>
                       </TabsContent>
                       {/* To align the items in the parent in the center, put the flex on the parent  */}
-                      <TabsContent value="current-seed-pair" className="flex justify-center items-center">
+                      <TabsContent value="current-seed-pair" className="flex m-0 justify-center items-center">
                         <CurrentSeedPair/>
                       </TabsContent>
-                      <TabsContent value="copy-seed-pair" className="flex justify-center items-center">
+                      <TabsContent value="copy-seed-pair" className="flex m-0 justify-center items-center">
                         <CopySeedPair/>
                       </TabsContent>
-                      <TabsContent value="calculation" className="flex justify-center items-center">
+                      <TabsContent value="calculation" className="flex m-0 justify-center items-center">
                         <Calculation/>
                       </TabsContent>
                     </div>
