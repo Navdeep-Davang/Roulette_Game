@@ -17,7 +17,7 @@ const CopySeedPair = () => {
                 <div className="self-stretch flex flex-col justify-start items-start sm:gap-4 gap-2">
                   <div className="text-white text-[16px] font-medium">Client Seed</div>
                   <div className="self-stretch rounded-lg border border-transparent sm:border-[#767c8a] flex justify-start gap-2 sm:gap-0 items-center sm:flex-row flex-col sm:w-auto w-full">
-                    <Input className="h-full rounded-lg border border-[#767c8a] sm:border-none text-white text-[16px] px-4 sm:py-2 py-3.5" placeholder="Type here..." />
+                    <Input className="h-12 rounded-lg border border-[#767c8a] sm:border-none text-white text-[16px] px-4 sm:py-2 py-3.5" placeholder="Type here..." />
                     <div className="sm:p-3 p-3 text-white bg-[#ffa31a] hover:bg-[#ff8c00] cursor-pointer rounded-lg sm:rounded-tl-none sm:rounded-bl-none sm:rounded-tr-lg sm:rounded-br-lg flex justify-center items-center gap-2.5 sm:w-auto w-full">
                       <Copy className="hidden sm:flex" />
                       <span className="sm:hidden text-[16px] font-medium">Copy</span>
@@ -30,7 +30,7 @@ const CopySeedPair = () => {
                 <div className="self-stretch flex flex-col justify-start items-start sm:gap-4 gap-2">
                     <div className="text-white text-[16px] font-medium">Server Seed</div>
                     <div className="self-stretch rounded-lg border border-transparent sm:border-[#767c8a] flex justify-start gap-2 sm:gap-0 items-center sm:flex-row flex-col sm:w-auto w-full">
-                      <Input className="h-full rounded-lg border border-[#767c8a] sm:border-none text-white text-[16px] px-4 sm:py-2 py-3.5" placeholder="Type here..." />
+                      <Input className="h-12 rounded-lg border border-[#767c8a] sm:border-none text-white text-[16px] px-4 sm:py-2 py-3.5" placeholder="Type here..." />
                       <div className="sm:p-3 p-3 text-white bg-[#ffa31a] hover:bg-[#ff8c00] cursor-pointer rounded-lg sm:rounded-tl-none sm:rounded-bl-none sm:rounded-tr-lg sm:rounded-br-lg flex justify-center items-center gap-2.5 sm:w-auto w-full">
                         <Copy className="hidden sm:flex" />
                         <span className="sm:hidden text-[16px] font-medium">Copy</span>
@@ -41,7 +41,7 @@ const CopySeedPair = () => {
                 {/* Nonce Section */}
                 <div className="self-stretch flex flex-col justify-start items-start gap-4">
                   <div className="text-white text-xl font-medium">Nonce</div>
-                  <Input className="h-full rounded-lg border border-[#767c8a] text-white text-[16px] px-4 sm:py-2 py-3.5" placeholder="Type here..." />
+                  <Input className="h-12 rounded-lg border border-[#767c8a] text-white text-[16px] px-4 sm:py-2 py-3.5" placeholder="Type here..." />
                 </div>
             </div>
         </div>

@@ -4,36 +4,30 @@ import React from "react";
 
 const Calculation = () => {
     return (
-        <div className="h-full w-3/4 flex flex-col  rounded-lg border border-[#767c8a]">
+        <div className="h-full lg:w-3/4 w-full mx-2 flex flex-col  rounded-lg border border-[#767c8a]">
             {/* Header Section */}
-            <div className="self-stretch p-6 bg-[#202328] rounded-tl-lg rounded-tr-lg border-b border-[#767c8a] flex justify-start items-center gap-2.5">
+            <div className="self-stretch sm:p-6 p-4 bg-[#202328] rounded-tl-lg rounded-tr-lg border-b border-[#767c8a] flex justify-start items-center gap-2.5">
                 <div className="text-white text-[22px] font-bold">Fairness</div>
             </div>
 
             {/* Content Section */}
-            <div className="self-stretch h-full p-8 bg-[#202328] rounded-bl-lg rounded-br-lg flex flex-col justify-center items-start gap-10">
+            <div className="self-stretch h-full sm:p-8 p-4 bg-[#202328] rounded-bl-lg rounded-br-lg flex flex-col justify-center items-start sm:gap-12 gap-8">
                 {/* Client Seed Section */}
-                <div className="self-stretch flex flex-col justify-start items-start gap-4">
+                <div className="self-stretch flex flex-col justify-start items-start sm:gap-4 gap-2">
                     <div className="text-white text-[16px] font-medium">Client Seed</div>
-                    <div className="self-stretch rounded-lg border border-[#767c8a] flex py-1.5 justify-start items-center">
-                        <Input className="border-none text-white text-[16px] px-4 py-2" placeholder="Type here..." />                      
-                    </div>
+                    <Input className="h-12 rounded-lg border border-[#767c8a] text-white text-[16px] px-4 sm:py-2 py-3.5" placeholder="Type here..." />
                 </div>
 
                 {/* Server Seed Section */}
                 <div className="self-stretch flex flex-col justify-start items-start gap-4">
                     <div className="text-white text-[16px] font-medium">Server Seed</div>
-                    <div className="self-stretch rounded-lg border border-[#767c8a] flex py-1.5 justify-start items-center">
-                        <Input className="border-none text-white text-[16px] px-4 py-2" placeholder="Type here..." />                      
-                    </div>
+                    <Input className="h-12 rounded-lg border border-[#767c8a] text-white text-[16px] px-4 sm:py-2 py-3.5" placeholder="Type here..." />
                 </div>
 
                 {/* Nonce Section */}
                 <div className="self-stretch flex flex-col justify-start items-start gap-4">
                     <div className="text-white text-xl font-medium">Nonce</div>
-                    <div className="self-stretch rounded-lg border border-[#767c8a] flex py-1.5 justify-start items-center">
-                        <Input className="border-none text-white text-[16px] px-4 py-2" placeholder="Type here..." />                      
-                    </div>
+                    <Input className="h-12 rounded-lg border border-[#767c8a] text-white text-[16px] px-4 sm:py-2 py-3.5" placeholder="Type here..." />
                 </div>
 
                 <button
